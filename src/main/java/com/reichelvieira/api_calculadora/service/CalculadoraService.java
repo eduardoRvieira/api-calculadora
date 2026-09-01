@@ -6,6 +6,6 @@ import com.reichelvieira.api_calculadora.dto.CalculadoraResposta;
 public class CalculadoraService {
    public CalculadoraResposta soma(CalculadoraRequisicao requisicao){
         double soma = requisicao.getN1() + requisicao.getN2();
-        return CalculadoraResposta(requisicao.getN1(), requisicao.getN2(), "Soma", soma);
+        return new CalculadoraResposta(requisicao.getN1(), requisicao.getN2(), "Soma", soma);
    }
 }
