@@ -13,22 +13,22 @@ public class CalculadoraController {
     @Autowired
     CalculadoraService servico;
 
-    @PostMapping("somar")
+    @PostMapping("/somar")
     public CalculadoraResposta somar(@RequestBody CalculadoraRequisicao requisicao){
         return servico.adicao(requisicao);
     }
 
-    @PostMapping("subtrair")
+    @PostMapping("/subtrair")
     public CalculadoraResposta subtrair(@RequestBody CalculadoraRequisicao requisicao){
         return servico.subtracao(requisicao);
     }
 
-    @PostMapping("multiplicar")
+    @PostMapping("/multiplicar")
     public CalculadoraResposta multiplicar(@RequestBody CalculadoraRequisicao requisicao){
         return servico.multiplicacao(requisicao);
     }
 
-    @PostMapping("dividir")
+    @PostMapping("/dividir")
     public CalculadoraResposta dividir(@RequestBody CalculadoraRequisicao requisicao){
         return servico.divisao(requisicao);
     }
