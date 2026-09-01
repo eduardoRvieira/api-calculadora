@@ -2,7 +2,9 @@ package com.reichelvieira.api_calculadora.service;
 
 import com.reichelvieira.api_calculadora.dto.CalculadoraRequisicao;
 import com.reichelvieira.api_calculadora.dto.CalculadoraResposta;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CalculadoraService {
    public CalculadoraResposta adicao(CalculadoraRequisicao requisicao){
         double resultado = requisicao.getN1() + requisicao.getN2();
