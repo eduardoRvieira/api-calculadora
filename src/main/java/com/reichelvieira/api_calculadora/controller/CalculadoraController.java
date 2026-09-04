@@ -12,7 +12,7 @@ public class CalculadoraController {
 
     private final CalculadoraService servico;
 
-    @Autowired
+    // @Autowired
     public CalculadoraController(CalculadoraService servico) {
         this.servico = servico;
     }
