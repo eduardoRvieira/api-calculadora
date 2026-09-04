@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/calculadora")
 public class CalculadoraController {
 
+    private final CalculadoraService servico;
+
     @Autowired
-    CalculadoraService servico;
+    public CalculadoraController(CalculadoraService servico) {
+        this.servico = servico;
+    }
 
     @PostMapping("/somar")
     public CalculadoraResposta somar(@RequestBody CalculadoraRequisicao requisicao){
